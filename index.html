@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register Form Validation By Using Javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../register form/style.css">
+  </head>
+  <body>
+    <main>
+
+
+
+
+      <div  class="container">
+        <form onsubmit="return false"  action="../page/index.html" method="get"  id="first_customer" style="max-width: 350px;" >
+          <h2>Login</h2>
+          <div class="select_type" id="select_type">
+            <div class="chose_feild" style="display: grid; grid-template-columns: 40% 60%;">
+              <label>Select UserType :</label>
+              <select id="mySelect">
+                  <option value="Customer">Customer </option>
+                  <option value="Restaurant">Restaurant </option>
+                  <option value="Delivery Personnel">Delivery Personnel </option>
+              </select>
+            </div>
+          </div>
+
+          <div id="input_feild">
+
+
+          <div class="input-group" style="margin-bottom: 5px;">
+            <label for="txtUserName">User Name</label>
+            <input
+              id="username"
+              type="text"
+              class="form-control"
+              name="txtUserName"
+              style="margin-bottom: 10px;"
+            />
+            <p style="color:red" id="username_error"></p>
+          </div>
+
+          <div class="input-group" style="margin-bottom: 5px;">
+            <label for="txtPassword">Password</label>
+            <input
+              type="password"
+              id="txtPassword"
+              class="form-control"
+              name="txtPassword"
+              style="margin-bottom: 10px;"
+            />
+            <button type="button"   onclick="toogleFunctionc()"   id="btnToggle" class="toggle">
+              <i id="eyeIcon" class="fa fa-eye"></i>
+            </button>
+            <p style="color:red" id="txtPassword_error"></p>
+          </div>
+          <a href="">Forgot Password?</a>
+        </div>
+
+        <div class="btn_group" style="display: flex; justify-content: space-between;">
+        <div class="btn_submit" style="width: 100%;margin-top: -20px;">
+          <button class="btn btn-lg btn-primary btn-block" onclick="handleSubmit()" style="width: 100%;"   id="submit_form">
+            Submit
+          </button>
+        </div>
+        </div>
+        <p style="text-align: center; margin-top: 10px;">I have not any account ? <a href="">signup</a></p>
+
+        </form>          
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="../database_con/database.js"></script>
+
+  </body>
+</html>
